@@ -1,0 +1,14 @@
+@import '~@angular/material/theming';
+
+:host {
+  display: block;
+  margin: 20px;
+
+  .chart {
+    height: 300px;
+  }
+
+  .mat-card-footer {
+    background-color: mat-color($mat-pink, 300);
+  }
+}

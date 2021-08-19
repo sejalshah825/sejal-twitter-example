@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="selected-hashtag">
+    <mat-form-field>
+      <input
+        matInput
+        [formControl]="hashtagFormControl"
+        [value]="selectedHashtag$ | async"
+        #input
+        placeholder="Search string "
+        (keyup.enter)="setSelectedHashtag(input.value)"
+        required
+      />
+      <mat-error *ngIf="hashtagFormControl.hasError('required')">
+        Please set a hashtag.
+      </mat-error>
+    </mat-form-field>
+  </div>
+
+  <div class="dashboard">
+   
+    <mat-divider [vertical]="true"></mat-divider>
+    <div class="card-container">
+      <div class="data-cards">
+        <app-data-display-card
+          [data]="selectedHashtagTweetCount$ | async"
+          dataLabel="Tweets"
+        ></app-data-display-card>
+        <app-data-display-card
+          [data]="selectedHashtagAvgPerMin$ | async"
+          dataLabel="Avg / min"
+        ></app-data-display-card>
+      </div>
+      
+      <div class="history-container">
+        <app-hashtag-history-card></app-hashtag-history-card>
+      </div>
+      <div class="chart-cards">
+        <app-pie-chart-card
+          [chartData]="chartData$ | async"
+        ></app-pie-chart-card>
+      </div>
+      <!-- <mat-divider></mat-divider> -->
+      
+    </div>
+  </div>
+</div>

@@ -1,0 +1,51 @@
+:host {
+  display: block;
+
+  > .container {
+    padding: 15px 20px;
+
+    .selected-hashtag {
+      text-align: center;
+
+      font-size: 1.5rem;
+    }
+
+    .dashboard {
+      display: flex;
+
+      .history-container {
+        margin: 0 20px;
+        flex:3;
+      }
+
+      .card-container {
+        flex: 3;
+
+        > div {
+          display: flex;
+          flex: 1;
+
+          &.data-cards {
+            justify-content: space-evenly;
+            app-data-display-card {
+              margin: 20px;
+            }
+          }
+
+          &.chart-cards {
+            app-pie-chart-card {
+              flex-basis: 100%;
+              width: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .dashboard {
+      flex-direction: row;
+    }
+  }
+}

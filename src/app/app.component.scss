@@ -1,0 +1,26 @@
+:host {
+  display: block;
+
+  .header {
+    padding-left: 40px;
+    background-color: #9292cf;
+
+    .title {
+      padding: 15px 0;
+      font-size: 3rem;
+      font-weight: 600;
+      color: red;
+      align-items: center;
+    }
+
+    .subtitle {
+      padding-bottom: 20px;
+      
+      align-items: center;
+    }
+  }
+
+  .mat-divider {
+    border-top-width: 2px;
+  }
+}

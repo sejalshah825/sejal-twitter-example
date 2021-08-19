@@ -1,0 +1,21 @@
+@import '~@angular/material/theming';
+
+:host {
+  display: block;
+  flex-basis: 45%;
+  padding-top: 15px;
+
+  .mat-card-content {
+    > div {
+      padding-left: 20px;
+
+      h1 {
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+  .mat-card-footer {
+    background-color: mat-color($mat-teal, A700);
+  }
+}
