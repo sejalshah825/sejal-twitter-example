@@ -3,10 +3,6 @@
 
 Used Old Angular as its setup in my personal laptop
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
-
-Used store 
-
 # RUN Instructions
 
 npm install to the project folder.
@@ -15,9 +11,9 @@ npm start
 access localhost:4200 in browser.
 
 # steps to execute program
-Go to localhost:4200
-enter search string - Use stock or afghanistan due to frequent discuss topic on twitter.
-Wait for few seconds or mins, program will pull up data from pubnub twitter api with some delay - 
+1) Go to localhost:4200
+2) enter search string - Use stock or afghanistan due to frequent discuss topic on twitter.
+3) Wait for few seconds or mins, program will pull up data from pubnub twitter api with some delay - 
 
 # Used components 
 
